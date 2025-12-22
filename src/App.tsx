@@ -1,3 +1,4 @@
+import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { ProblemSolution } from './components/ProblemSolution';
 import { ServiceProcess } from './components/ServiceProcess';
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="min-h-screen relative bg-white">
       <InteractiveDots />
+      <Navigation />
       <div className="relative z-10">
         <Hero />
         <ProblemSolution />
