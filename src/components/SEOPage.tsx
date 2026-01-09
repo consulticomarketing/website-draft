@@ -168,85 +168,88 @@ export function SEOPage() {
 
       <section className="bg-white py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-            <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                You're putting everything into your business, but you're still invisible online
-              </h2>
-              <p className="text-xl text-gray-600 mb-12">
-                We get it. You know your business inside and out. You deliver exceptional service. But when potential customers search for what you offer, they find your competitors instead.
-              </p>
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
+              You're putting everything into your business, but you're still invisible online
+            </h2>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">You're buried on page 2 (or worse) of Google</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Your website exists, but it might as well be invisible. Less than 1% of searchers ever make it to page 2, and that's where you're stuck watching competitors take customers that should be yours.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">You're throwing money at ads with nothing to show for it</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      The moment you stop paying for ads, the traffic stops. You're trapped in an expensive cycle, watching your marketing budget disappear month after month without building anything that lasts.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Your competitors are everywhere, and you're nowhere</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Every search shows their name at the top. Every customer finds them first. You're doing the same work, offering the same quality, but they're capturing the market while you're left wondering what they know that you don't.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">You've tried SEO before and got burned</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Empty promises, confusing jargon, zero results. You paid someone who didn't deliver, or you tried to figure it out yourself and felt completely overwhelmed. Now you're skeptical, frustrated, and not sure who to trust.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl">
-                <p className="text-xl text-gray-900 font-semibold mb-4">
-                  Here's the truth: Your business deserves to be found.
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div>
+                <p className="text-xl text-gray-600 mb-12">
+                  We get it. You know your business inside and out. You deliver exceptional service. But when potential customers search for what you offer, they find your competitors instead.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  The customers you're meant to serve are out there right now, searching for exactly what you offer. They need your expertise, your service, your solution. But they'll never find you if you're not showing up in their search results. That's where we come in.
-                </p>
-              </div>
-            </div>
 
-            <div className="lg:sticky lg:top-8">
-              <div className="relative w-full aspect-[4/5] bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-gray-400">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gray-300 rounded-lg flex items-center justify-center">
-                      <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
-                    <p className="text-sm font-medium">Image Placeholder</p>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">You're buried on page 2 (or worse) of Google</h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Your website exists, but it might as well be invisible. Less than 1% of searchers ever make it to page 2, and that's where you're stuck watching competitors take customers that should be yours.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">You're throwing money at ads with nothing to show for it</h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        The moment you stop paying for ads, the traffic stops. You're trapped in an expensive cycle, watching your marketing budget disappear month after month without building anything that lasts.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Your competitors are everywhere, and you're nowhere</h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Every search shows their name at the top. Every customer finds them first. You're doing the same work, offering the same quality, but they're capturing the market while you're left wondering what they know that you don't.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">You've tried SEO before and got burned</h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Empty promises, confusing jargon, zero results. You paid someone who didn't deliver, or you tried to figure it out yourself and felt completely overwhelmed. Now you're skeptical, frustrated, and not sure who to trust.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl">
+                  <p className="text-xl text-gray-900 font-semibold mb-4">
+                    Here's the truth: Your business deserves to be found.
+                  </p>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    The customers you're meant to serve are out there right now, searching for exactly what you offer. They need your expertise, your service, your solution. But they'll never find you if you're not showing up in their search results. That's where we come in.
+                  </p>
+                </div>
+              </div>
+
+              <div className="lg:sticky lg:top-8">
+                <div className="relative w-full aspect-[4/5] bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-gray-400">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-gray-300 rounded-lg flex items-center justify-center">
+                        <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <p className="text-sm font-medium">Image Placeholder</p>
+                    </div>
                   </div>
                 </div>
               </div>
