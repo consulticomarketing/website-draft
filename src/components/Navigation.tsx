@@ -11,7 +11,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
 
   const menuItems = [
     { name: 'Home', page: 'home' },
-    { name: 'Think-First Programme', page: 'think-first-programme' },
+    { name: 'Think-First', page: 'think-first-programme' },
     { name: 'SEO', page: 'seo' },
     { name: 'Content Marketing', page: 'content' },
     { name: 'Paid Advertising', page: 'paid-ads' },
@@ -41,7 +41,9 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.page)}
-                className={`text-sm font-medium uppercase tracking-wide transition-colors duration-200 ${
+                className={`text-sm uppercase tracking-wide transition-colors duration-200 ${
+                  item.page === 'think-first-programme' ? 'font-semibold' : 'font-medium'
+                } ${
                   currentPage === item.page
                     ? 'text-[#007bff]'
                     : 'text-gray-600 hover:text-[#007bff]'
@@ -74,7 +76,9 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.page)}
-                className={`w-full text-left block px-4 py-3 transition-colors duration-150 rounded-lg text-sm font-medium uppercase tracking-wide ${
+                className={`w-full text-left block px-4 py-3 transition-colors duration-150 rounded-lg text-sm uppercase tracking-wide ${
+                  item.page === 'think-first-programme' ? 'font-semibold' : 'font-medium'
+                } ${
                   currentPage === item.page
                     ? 'bg-blue-50 text-[#007bff]'
                     : 'text-gray-600 hover:bg-gray-50 hover:text-[#007bff]'
