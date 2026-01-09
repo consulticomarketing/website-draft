@@ -242,7 +242,7 @@ export function SEOPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Comprehensive SEO Services
+              Let SEO Empower Your Business
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               End-to-end SEO solutions tailored to your business needs
