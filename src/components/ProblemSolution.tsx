@@ -19,7 +19,7 @@ export function ProblemSolution() {
               <AlertCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Common Struggles</h3>
-                <ul className="space-y-3 text-gray-700">
+                <ul className="space-y-5 text-gray-700 list-none text-lg font-medium">
                   <li>Unclear ROI from marketing investments and agency partnerships</li>
                   <li>Difficulty building effective marketing systems without specialized expertise</li>
                   <li>Generic strategies that don't align with your specific business model</li>
@@ -35,7 +35,7 @@ export function ProblemSolution() {
               <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">The Solution</h3>
-                <ul className="space-y-3 text-gray-700">
+                <ul className="space-y-5 text-gray-700 list-none text-lg font-medium">
                   <li>A short-term solution which answers long term problem</li>
                   <li>Save money over time by investing in the right things</li>
                   <li>Get rid of the guesswork</li>
