@@ -20,7 +20,9 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const handleNavigation = (page: string) => {
     onNavigate(page);
     setIsMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 250);
   };
 
   return (

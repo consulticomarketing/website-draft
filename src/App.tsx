@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { ProblemSolution } from './components/ProblemSolution';
@@ -12,9 +12,30 @@ import { SEOPage } from './components/SEOPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [displayPage, setDisplayPage] = useState('home');
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [transitionState, setTransitionState] = useState<'idle' | 'exit' | 'enter'>('idle');
+
+  const handleNavigate = (page: string) => {
+    if (page === currentPage) return;
+
+    setIsTransitioning(true);
+    setTransitionState('exit');
+
+    setTimeout(() => {
+      setDisplayPage(page);
+      setCurrentPage(page);
+      setTransitionState('enter');
+
+      setTimeout(() => {
+        setTransitionState('idle');
+        setIsTransitioning(false);
+      }, 500);
+    }, 500);
+  };
 
   const renderPage = () => {
-    switch (currentPage) {
+    switch (displayPage) {
       case 'seo':
         return <SEOPage />;
       case 'home':
@@ -33,11 +54,25 @@ function App() {
     }
   };
 
+  const getTransitionClasses = () => {
+    if (transitionState === 'exit') {
+      return 'translate-x-[-100%] opacity-0';
+    } else if (transitionState === 'enter') {
+      return 'translate-x-[100%] opacity-0';
+    }
+    return 'translate-x-0 opacity-100';
+  };
+
   return (
-    <div className="min-h-screen relative bg-white">
+    <div className="min-h-screen relative bg-white overflow-x-hidden">
       <InteractiveDots />
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
-      {renderPage()}
+      <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
+      <div
+        className={`transition-all duration-500 ease-in-out ${getTransitionClasses()}`}
+        style={{ willChange: 'transform, opacity' }}
+      >
+        {renderPage()}
+      </div>
     </div>
   );
 }
