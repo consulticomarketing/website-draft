@@ -22,7 +22,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     setIsMenuOpen(false);
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'instant' });
-    }, 250);
+    }, 125);
   };
 
   return (

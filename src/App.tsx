@@ -30,8 +30,8 @@ function App() {
       setTimeout(() => {
         setTransitionState('idle');
         setIsTransitioning(false);
-      }, 500);
-    }, 500);
+      }, 250);
+    }, 250);
   };
 
   const renderPage = () => {
@@ -68,7 +68,7 @@ function App() {
       <InteractiveDots />
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       <div
-        className={`transition-all duration-500 ease-in-out ${getTransitionClasses()}`}
+        className={`transition-all duration-250 ease-in-out ${getTransitionClasses()}`}
         style={{ willChange: 'transform, opacity' }}
       >
         {renderPage()}
