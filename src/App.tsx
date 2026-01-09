@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navigation } from './components/Navigation';
+import { Home } from './components/Home';
 import { Hero } from './components/Hero';
 import { ProblemSolution } from './components/ProblemSolution';
 import { ServiceProcess } from './components/ServiceProcess';
@@ -36,10 +37,9 @@ function App() {
 
   const renderPage = () => {
     switch (displayPage) {
-      case 'seo':
-        return <SEOPage />;
       case 'home':
-      default:
+        return <Home />;
+      case 'think-first-programme':
         return (
           <div className="relative z-10">
             <Hero />
@@ -51,6 +51,10 @@ function App() {
             <Quiz />
           </div>
         );
+      case 'seo':
+        return <SEOPage />;
+      default:
+        return <Home />;
     }
   };
 
