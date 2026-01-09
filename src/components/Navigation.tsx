@@ -26,7 +26,18 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
+    <>
+      <div className="bg-[#1e3a5f] py-2.5">
+        <div className="max-w-7xl mx-auto px-6 flex justify-end items-center gap-8 text-white text-xs">
+          <a href="mailto:email@consultico.co.uk" className="hover:text-gray-200 transition-colors">
+            E: email@consultico.co.uk
+          </a>
+          <a href="tel:01414591351" className="hover:text-gray-200 transition-colors">
+            T: 0141 459 1351
+          </a>
+        </div>
+      </div>
+      <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-5">
         <div className="flex justify-between items-center">
           <button
@@ -97,5 +108,6 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
         )}
       </div>
     </nav>
+    </>
   );
 }
