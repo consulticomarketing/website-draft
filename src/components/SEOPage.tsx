@@ -1,8 +1,10 @@
 import { Search, TrendingUp, Target, Award, BarChart3, Users, CheckCircle, ArrowRight, Globe, Zap } from 'lucide-react';
 import { useState } from 'react';
+import { SEOAuditForm } from './SEOAuditForm';
 
 export function SEOPage() {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
+  const [showAuditForm, setShowAuditForm] = useState(false);
 
   const benefits = [
     {
@@ -143,7 +145,10 @@ export function SEOPage() {
               Partner with SEO experts who understand your business goals. We don't just improve rankings—we deliver qualified traffic that converts into real revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#007bff] text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2">
+              <button
+                onClick={() => setShowAuditForm(true)}
+                className="bg-[#007bff] text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
+              >
                 Get Your Free SEO Audit
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -368,7 +373,10 @@ export function SEOPage() {
           <p className="text-xl text-blue-100 mb-8">
             Get a free, no-obligation SEO audit and discover your growth opportunities
           </p>
-          <button className="bg-white text-[#007bff] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center gap-2">
+          <button
+            onClick={() => setShowAuditForm(true)}
+            className="bg-white text-[#007bff] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center gap-2"
+          >
             Schedule Your Free Consultation
             <ArrowRight className="w-5 h-5" />
           </button>
@@ -414,6 +422,8 @@ export function SEOPage() {
           </div>
         </div>
       </section>
+
+      {showAuditForm && <SEOAuditForm onClose={() => setShowAuditForm(false)} />}
     </div>
   );
 }
