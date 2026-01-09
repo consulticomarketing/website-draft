@@ -8,7 +8,7 @@ export function SEOPage() {
     {
       icon: TrendingUp,
       title: 'Increase Organic Traffic',
-      description: 'Drive more qualified visitors to your website through improved search rankings and targeted keyword optimisation.'
+      description: 'Drive more qualified visitors to your website through improved search rankings and targeted keyword optimization.'
     },
     {
       icon: Target,
@@ -33,10 +33,10 @@ export function SEOPage() {
       description: 'Comprehensive analysis of your website\'s technical health, crawlability, and indexing.',
       features: [
         'Site architecture review',
-        'Page speed optimisation',
+        'Page speed optimization',
         'Mobile responsiveness check',
         'Schema markup implementation',
-        'XML sitemap optimisation'
+        'XML sitemap optimization'
       ]
     },
     {
@@ -51,14 +51,14 @@ export function SEOPage() {
       ]
     },
     {
-      title: 'On-Page Optimisation',
-      description: 'Strategic optimisation of your website content and structure for maximum visibility.',
+      title: 'On-Page Optimization',
+      description: 'Strategic optimization of your website content and structure for maximum visibility.',
       features: [
-        'Title tag and meta description optimisation',
+        'Title tag and meta description optimization',
         'Header tag structure',
         'Internal linking strategy',
-        'Content optimisation',
-        'Image alt text optimisation'
+        'Content optimization',
+        'Image alt text optimization'
       ]
     },
     {
@@ -82,7 +82,7 @@ export function SEOPage() {
       features: [
         'Initial SEO audit',
         'Keyword research (up to 20 keywords)',
-        'On-page optimisation',
+        'On-page optimization',
         'Monthly reporting',
         'Email support'
       ],
@@ -111,7 +111,7 @@ export function SEOPage() {
         'Unlimited keyword tracking',
         'Dedicated account manager',
         'Custom reporting dashboard',
-        'Ongoing technical optimisation',
+        'Ongoing technical optimization',
         'Multi-location SEO',
         '24/7 support'
       ],
@@ -242,10 +242,10 @@ export function SEOPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              What's Included in Your SEO Service
+              Comprehensive SEO Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Every element you need to dominate search rankings and drive real business growth
+              End-to-end SEO solutions tailored to your business needs
             </p>
           </div>
 
@@ -370,7 +370,7 @@ export function SEOPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery & Audit</h3>
               <p className="text-gray-600">
-                We analyse your current SEO performance, competitors, and opportunities to create a baseline.
+                We analyze your current SEO performance, competitors, and opportunities to create a baseline.
               </p>
             </div>
             <div className="text-center">
@@ -379,16 +379,16 @@ export function SEOPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Strategy & Implementation</h3>
               <p className="text-gray-600">
-                We execute a custom SEO strategy with technical fixes, content optimisation, and link building.
+                We execute a custom SEO strategy with technical fixes, content optimization, and link building.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-[#007bff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Monitor & Optimise</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Monitor & Optimize</h3>
               <p className="text-gray-600">
-                Continuous monitoring, reporting, and optimisation to ensure sustained growth and ROI.
+                Continuous monitoring, reporting, and optimization to ensure sustained growth and ROI.
               </p>
             </div>
           </div>
