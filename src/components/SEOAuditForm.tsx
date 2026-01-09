@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X, CheckCircle } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
@@ -17,6 +17,13 @@ export function SEOAuditForm({ onClose }: SEOAuditFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -71,8 +78,8 @@ export function SEOAuditForm({ onClose }: SEOAuditFormProps) {
   }
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-6 overflow-y-auto">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full my-8">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-start justify-center z-50 overflow-y-auto pt-8 pb-8">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-6">
         <div className="relative bg-gradient-to-r from-[#007bff] to-blue-700 text-white p-8 rounded-t-2xl">
           <button
             onClick={onClose}
