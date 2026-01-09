@@ -68,6 +68,8 @@ export function InteractiveDots() {
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
       for (const dot of dots) {
+        if (dot.baseY < 50) continue;
+
         let x = dot.baseX;
         let y = dot.baseY;
 

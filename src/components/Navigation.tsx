@@ -30,10 +30,10 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
       <div className="bg-[#1e3a5f] py-2">
         <div className="max-w-7xl mx-auto px-6 flex justify-start items-center gap-12 text-white text-base font-semibold">
           <a href="mailto:email@consultico.co.uk" className="hover:text-gray-200 transition-colors">
-            E email@consultico.co.uk
+            E: email@consultico.co.uk
           </a>
           <a href="tel:01414591351" className="hover:text-gray-200 transition-colors">
-            T 0141 459 1351
+            T: 0141 459 1351
           </a>
         </div>
       </div>
