@@ -10,6 +10,7 @@ import { Credentials } from './components/Credentials';
 import { InteractiveDots } from './components/InteractiveDots';
 import { Quiz } from './components/Quiz';
 import { SEOPage } from './components/SEOPage';
+import { Footer } from './components/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -77,6 +78,7 @@ function App() {
       >
         {renderPage()}
       </div>
+      <Footer onNavigate={handleNavigate} />
     </div>
   );
 }
