@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavigationProps {
   currentPage: string;
@@ -14,7 +14,6 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     { name: 'SEO', page: 'seo' },
     { name: 'Content Marketing', page: 'content' },
     { name: 'Paid Advertising', page: 'paid-ads' },
-    { name: 'Contact', page: 'contact' },
   ];
 
   const handleNavigation = (page: string) => {
@@ -26,8 +25,8 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 py-5">
         <div className="flex justify-between items-center">
           <button
             onClick={() => handleNavigation('home')}
@@ -36,37 +35,29 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
             Consultico
           </button>
 
-          <div className="hidden md:block">
-            <div className="relative">
+          <div className="hidden lg:flex items-center gap-8">
+            {menuItems.map((item) => (
               <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-[#007bff] transition-colors duration-200 font-medium"
+                key={item.name}
+                onClick={() => handleNavigation(item.page)}
+                className={`text-sm font-medium uppercase tracking-wide transition-colors duration-200 ${
+                  currentPage === item.page
+                    ? 'text-[#007bff]'
+                    : 'text-gray-600 hover:text-[#007bff]'
+                }`}
               >
-                Menu
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`} />
+                {item.name}
               </button>
-
-              {isMenuOpen && (
-                <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
-                  {menuItems.map((item) => (
-                    <button
-                      key={item.name}
-                      onClick={() => handleNavigation(item.page)}
-                      className={`w-full text-left block px-4 py-3 transition-colors duration-150 ${
-                        currentPage === item.page
-                          ? 'bg-blue-50 text-[#007bff] font-medium'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-[#007bff]'
-                      }`}
-                    >
-                      {item.name}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            ))}
+            <button
+              onClick={() => handleNavigation('contact')}
+              className="px-6 py-2.5 bg-white text-gray-800 font-medium text-sm uppercase tracking-wide border-2 border-gray-800 rounded-full hover:bg-gray-800 hover:text-white transition-all duration-200"
+            >
+              Contact
+            </button>
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-[#007bff] transition-colors duration-200"
@@ -77,20 +68,26 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-2">
+          <div className="lg:hidden mt-4 pb-2">
             {menuItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item.page)}
-                className={`w-full text-left block px-4 py-3 transition-colors duration-150 rounded-lg ${
+                className={`w-full text-left block px-4 py-3 transition-colors duration-150 rounded-lg text-sm font-medium uppercase tracking-wide ${
                   currentPage === item.page
-                    ? 'bg-blue-50 text-[#007bff] font-medium'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-[#007bff]'
+                    ? 'bg-blue-50 text-[#007bff]'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-[#007bff]'
                 }`}
               >
                 {item.name}
               </button>
             ))}
+            <button
+              onClick={() => handleNavigation('contact')}
+              className="w-full mt-2 px-4 py-3 bg-gray-800 text-white font-medium text-sm uppercase tracking-wide rounded-lg hover:bg-gray-700 transition-colors duration-200"
+            >
+              Contact
+            </button>
           </div>
         )}
       </div>
