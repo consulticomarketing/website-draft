@@ -192,7 +192,7 @@ export function SEOPage() {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">You're buried on page 2 (or worse) of Google</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Your website exists, but it might as well be invisible. Less than 1% of searchers ever make it to page 2, and that's where you're stuck watching competitors take customers that should be yours.
+                        Less than 1% of searchers make it to page 2. Your competitors are taking customers that should be yours.
                       </p>
                     </div>
                   </div>
@@ -204,7 +204,7 @@ export function SEOPage() {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">You're throwing money at ads with nothing to show for it</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        The moment you stop paying for ads, the traffic stops. You're trapped in an expensive cycle, watching your marketing budget disappear month after month without building anything that lasts.
+                        Stop paying, traffic stops. You're trapped in an expensive cycle without building anything that lasts.
                       </p>
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export function SEOPage() {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">Your competitors are everywhere, and you're nowhere</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Every search shows their name at the top. Every customer finds them first. You're doing the same work, offering the same quality, but they're capturing the market while you're left wondering what they know that you don't.
+                        They appear at the top of every search. You offer the same quality, but they're capturing the market.
                       </p>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ export function SEOPage() {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">You've tried SEO before and got burned</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Empty promises, confusing jargon, zero results. You paid someone who didn't deliver, or you tried to figure it out yourself and felt completely overwhelmed. Now you're skeptical, frustrated, and not sure who to trust.
+                        Empty promises, zero results. Now you're skeptical and not sure who to trust.
                       </p>
                     </div>
                   </div>
