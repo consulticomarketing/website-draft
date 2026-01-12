@@ -13,6 +13,7 @@ export function Footer({ onNavigate }: FooterProps) {
     { name: 'SEO Services', page: 'seo' },
     { name: 'Content Marketing', page: 'content' },
     { name: 'Paid Advertising', page: 'paid-ads' },
+    { name: 'Careers', page: 'careers' },
     { name: 'Contact Us', page: 'contact' },
   ];
 

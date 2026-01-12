@@ -15,6 +15,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     { name: 'SEO', page: 'seo' },
     { name: 'Content Marketing', page: 'content' },
     { name: 'Paid Advertising', page: 'paid-ads' },
+    { name: 'Careers', page: 'careers' },
   ];
 
   const handleNavigation = (page: string) => {
