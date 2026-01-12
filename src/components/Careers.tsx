@@ -141,7 +141,7 @@ export function Careers() {
 
             <div className="relative">
               <img
-                src="/screenshot_2026-01-12_at_13.06.39.png"
+                src="/image.png"
                 alt="Team working together"
                 className="rounded-2xl shadow-2xl w-full"
               />
