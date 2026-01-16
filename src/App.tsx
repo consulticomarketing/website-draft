@@ -34,8 +34,8 @@ function App() {
       setTimeout(() => {
         setTransitionState('idle');
         setIsTransitioning(false);
-      }, 250);
-    }, 250);
+      }, 150);
+    }, 150);
   };
 
   const renderPage = () => {
@@ -67,11 +67,11 @@ function App() {
 
   const getTransitionClasses = () => {
     if (transitionState === 'exit') {
-      return 'translate-x-[-100%] opacity-0';
+      return 'opacity-0';
     } else if (transitionState === 'enter') {
-      return 'translate-x-[100%] opacity-0';
+      return 'opacity-0';
     }
-    return 'translate-x-0 opacity-100';
+    return 'opacity-100';
   };
 
   return (
@@ -79,8 +79,8 @@ function App() {
       <InteractiveDots />
       <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
       <div
-        className={`transition-all duration-250 ease-in-out ${getTransitionClasses()}`}
-        style={{ willChange: 'transform, opacity' }}
+        className={`transition-opacity duration-150 ease-in-out ${getTransitionClasses()}`}
+        style={{ willChange: 'opacity' }}
       >
         {renderPage()}
       </div>
