@@ -19,19 +19,11 @@ interface ClickPosition {
 export function PortfolioTemplate() {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
   const [clickPosition, setClickPosition] = useState<ClickPosition>({ x: 0, y: 0, top: 0 });
-  const [isAnimating, setIsAnimating] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (selectedCase) {
-      setIsAnimating(true);
-      const timer = setTimeout(() => {
-        setIsAnimating(false);
-        if (modalRef.current) {
-          modalRef.current.scrollTop = 0;
-        }
-      }, 50);
-      return () => clearTimeout(timer);
+    if (selectedCase && modalRef.current) {
+      modalRef.current.scrollTop = 0;
     }
   }, [selectedCase]);
 
@@ -309,7 +301,7 @@ The acquisition closed successfully with structured financing terms favorable to
         <div
           className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
           style={{
-            animation: 'fadeIn 0.3s ease-out'
+            animation: 'fadeIn 0.2s ease-out'
           }}
           onClick={() => setSelectedCase(null)}
         >
@@ -318,10 +310,7 @@ The acquisition closed successfully with structured financing terms favorable to
             className="absolute left-1/2 -translate-x-1/2 bg-white rounded-2xl max-w-4xl w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto shadow-2xl mx-4"
             style={{
               top: `${clickPosition.top}px`,
-              transformOrigin: `${clickPosition.x}px ${clickPosition.y}px`,
-              animation: isAnimating ? 'none' : 'modalExpand 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
-              transform: isAnimating ? 'scale(0) translateX(-50%)' : 'scale(1) translateX(-50%)',
-              opacity: isAnimating ? 0 : 1
+              animation: 'modalFadeIn 0.2s ease-out',
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -371,14 +360,14 @@ The acquisition closed successfully with structured financing terms favorable to
           }
         }
 
-        @keyframes modalExpand {
+        @keyframes modalFadeIn {
           from {
-            transform: scale(0);
             opacity: 0;
+            transform: translateX(-50%) translateY(10px);
           }
           to {
-            transform: scale(1);
             opacity: 1;
+            transform: translateX(-50%) translateY(0);
           }
         }
       `}</style>
