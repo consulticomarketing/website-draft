@@ -13,11 +13,12 @@ interface CaseStudy {
 interface ClickPosition {
   x: number;
   y: number;
+  top: number;
 }
 
 export function PortfolioTemplate() {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
-  const [clickPosition, setClickPosition] = useState<ClickPosition>({ x: 0, y: 0 });
+  const [clickPosition, setClickPosition] = useState<ClickPosition>({ x: 0, y: 0, top: 0 });
   const [isAnimating, setIsAnimating] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -36,9 +37,24 @@ export function PortfolioTemplate() {
 
   const handleCaseClick = (study: CaseStudy, event: React.MouseEvent) => {
     const rect = event.currentTarget.getBoundingClientRect();
+    const scrollY = window.scrollY || window.pageYOffset;
+
+    const modalHeight = window.innerHeight * 0.9;
+    const viewportHeight = window.innerHeight;
+    const padding = 20;
+
+    let calculatedTop = rect.top + scrollY;
+
+    if (calculatedTop + modalHeight > scrollY + viewportHeight - padding) {
+      calculatedTop = Math.max(scrollY + padding, scrollY + viewportHeight - modalHeight - padding);
+    }
+
+    calculatedTop = Math.max(calculatedTop, scrollY + padding);
+
     setClickPosition({
       x: rect.left + rect.width / 2,
-      y: rect.top + rect.height / 2
+      y: rect.top + rect.height / 2,
+      top: calculatedTop
     });
     setSelectedCase(study);
   };
@@ -291,20 +307,23 @@ The acquisition closed successfully with structured financing terms favorable to
 
       {selectedCase && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
           style={{
             animation: 'fadeIn 0.3s ease-out'
           }}
+          onClick={() => setSelectedCase(null)}
         >
           <div
             ref={modalRef}
-            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            className="absolute left-1/2 -translate-x-1/2 bg-white rounded-2xl max-w-4xl w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto shadow-2xl mx-4"
             style={{
+              top: `${clickPosition.top}px`,
               transformOrigin: `${clickPosition.x}px ${clickPosition.y}px`,
               animation: isAnimating ? 'none' : 'modalExpand 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
-              transform: isAnimating ? 'scale(0)' : 'scale(1)',
+              transform: isAnimating ? 'scale(0) translateX(-50%)' : 'scale(1) translateX(-50%)',
               opacity: isAnimating ? 0 : 1
             }}
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="sticky top-0 bg-white border-b border-gray-200 px-8 py-6 flex items-center justify-between">
               <div>
