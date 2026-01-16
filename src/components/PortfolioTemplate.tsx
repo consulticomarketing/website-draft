@@ -1,4 +1,12 @@
 export function PortfolioTemplate() {
+  const skills = [
+    { name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
+    { name: 'WordPress', logo: 'https://s.w.org/style/images/about/WordPress-logotype-standard.png' },
+    { name: 'FreeAgent', logo: 'https://www.freeagent.com/wp-content/themes/freeagent/img/logo.svg' },
+    { name: 'Google Workspace', logo: 'https://lh3.googleusercontent.com/23K9TDTOdlo57Pi9JvNtPc9K-utoed1JM7BxbvBd7QAr4-hi5SypEbOiFvW2SGZH2TOo8jYn-sd5yaf6I3JMGO_vLvSIvFaTnWLnGWk' },
+    { name: 'Meta Business Suite', logo: 'https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/S3Y3TH1pIuX.png' }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <section className="py-20 px-6">
@@ -30,6 +38,28 @@ export function PortfolioTemplate() {
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
+            Skills
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+            {skills.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200 w-full h-32"
+              >
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="max-w-full max-h-20 object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
