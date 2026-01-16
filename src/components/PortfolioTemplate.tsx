@@ -299,7 +299,7 @@ The acquisition closed successfully with structured financing terms favorable to
 
       {selectedCase && (
         <div
-          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm"
           style={{
             animation: 'fadeIn 0.2s ease-out'
           }}
