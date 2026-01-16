@@ -10,16 +10,25 @@ interface CaseStudy {
   content: string;
 }
 
-interface ClickPosition {
-  x: number;
-  y: number;
-  top: number;
-}
-
 export function PortfolioTemplate() {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
-  const [clickPosition, setClickPosition] = useState<ClickPosition>({ x: 0, y: 0, top: 0 });
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (selectedCase) {
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => {
+        setIsModalVisible(true);
+      });
+    } else {
+      document.body.style.overflow = '';
+      setIsModalVisible(false);
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedCase]);
 
   useEffect(() => {
     if (selectedCase && modalRef.current) {
@@ -27,28 +36,15 @@ export function PortfolioTemplate() {
     }
   }, [selectedCase]);
 
-  const handleCaseClick = (study: CaseStudy, event: React.MouseEvent) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const scrollY = window.scrollY || window.pageYOffset;
-
-    const modalHeight = window.innerHeight * 0.9;
-    const viewportHeight = window.innerHeight;
-    const padding = 20;
-
-    let calculatedTop = rect.top + scrollY;
-
-    if (calculatedTop + modalHeight > scrollY + viewportHeight - padding) {
-      calculatedTop = Math.max(scrollY + padding, scrollY + viewportHeight - modalHeight - padding);
-    }
-
-    calculatedTop = Math.max(calculatedTop, scrollY + padding);
-
-    setClickPosition({
-      x: rect.left + rect.width / 2,
-      y: rect.top + rect.height / 2,
-      top: calculatedTop
-    });
+  const handleCaseClick = (study: CaseStudy) => {
     setSelectedCase(study);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalVisible(false);
+    setTimeout(() => {
+      setSelectedCase(null);
+    }, 200);
   };
 
   const skills = [
@@ -232,7 +228,7 @@ The acquisition closed successfully with structured financing terms favorable to
                 {caseStudies.slice(0, 3).map((study) => (
                   <div
                     key={study.id}
-                    onClick={(e) => handleCaseClick(study, e)}
+                    onClick={() => handleCaseClick(study)}
                     className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-200 cursor-pointer group"
                   >
                     <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
@@ -254,7 +250,7 @@ The acquisition closed successfully with structured financing terms favorable to
                   {caseStudies.slice(3).map((study) => (
                     <div
                       key={study.id}
-                      onClick={(e) => handleCaseClick(study, e)}
+                      onClick={() => handleCaseClick(study)}
                       className="bg-white rounded-lg p-4 hover:shadow-md transition-all duration-200 cursor-pointer group border border-gray-100"
                     >
                       <span className="text-xs font-semibold text-blue-600 uppercase tracking-wide">
@@ -299,22 +295,21 @@ The acquisition closed successfully with structured financing terms favorable to
 
       {selectedCase && (
         <div
-          className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm"
-          style={{
-            animation: 'fadeIn 0.2s ease-out'
-          }}
-          onClick={() => setSelectedCase(null)}
+          className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-opacity duration-200 ${
+            isModalVisible ? 'bg-black/50 backdrop-blur-sm' : 'bg-transparent'
+          }`}
+          onClick={handleCloseModal}
         >
           <div
             ref={modalRef}
-            className="absolute left-1/2 -translate-x-1/2 bg-white rounded-2xl max-w-4xl w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto shadow-2xl mx-4"
-            style={{
-              top: `${clickPosition.top}px`,
-              animation: 'modalFadeIn 0.2s ease-out',
-            }}
+            className={`bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transition-all duration-200 ${
+              isModalVisible
+                ? 'opacity-100 scale-100 translate-y-0'
+                : 'opacity-0 scale-95 translate-y-4'
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 bg-white border-b border-gray-200 px-8 py-6 flex items-center justify-between">
+            <div className="sticky top-0 bg-white border-b border-gray-200 px-8 py-6 flex items-center justify-between z-10">
               <div>
                 <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
                   {selectedCase.category}
@@ -324,7 +319,7 @@ The acquisition closed successfully with structured financing terms favorable to
                 </h3>
               </div>
               <button
-                onClick={() => setSelectedCase(null)}
+                onClick={handleCloseModal}
                 className="p-2 hover:bg-gray-100 rounded-full transition-colors"
               >
                 <X className="w-6 h-6 text-gray-600" />
@@ -349,28 +344,6 @@ The acquisition closed successfully with structured financing terms favorable to
           </div>
         </div>
       )}
-
-      <style>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes modalFadeIn {
-          from {
-            opacity: 0;
-            transform: translateX(-50%) translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-          }
-        }
-      `}</style>
     </div>
   );
 }
