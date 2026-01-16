@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
 interface CaseStudy {
@@ -10,8 +10,32 @@ interface CaseStudy {
   content: string;
 }
 
+interface ClickPosition {
+  x: number;
+  y: number;
+}
+
 export function PortfolioTemplate() {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
+  const [clickPosition, setClickPosition] = useState<ClickPosition>({ x: 0, y: 0 });
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    if (selectedCase) {
+      setIsAnimating(true);
+      const timer = setTimeout(() => setIsAnimating(false), 50);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedCase]);
+
+  const handleCaseClick = (study: CaseStudy, event: React.MouseEvent) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setClickPosition({
+      x: rect.left + rect.width / 2,
+      y: rect.top + rect.height / 2
+    });
+    setSelectedCase(study);
+  };
 
   const skills = [
     { name: 'Figma', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
@@ -194,7 +218,7 @@ The acquisition closed successfully with structured financing terms favorable to
                 {caseStudies.slice(0, 3).map((study) => (
                   <div
                     key={study.id}
-                    onClick={() => setSelectedCase(study)}
+                    onClick={(e) => handleCaseClick(study, e)}
                     className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-200 cursor-pointer group"
                   >
                     <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
@@ -216,7 +240,7 @@ The acquisition closed successfully with structured financing terms favorable to
                   {caseStudies.slice(3).map((study) => (
                     <div
                       key={study.id}
-                      onClick={() => setSelectedCase(study)}
+                      onClick={(e) => handleCaseClick(study, e)}
                       className="bg-white rounded-lg p-4 hover:shadow-md transition-all duration-200 cursor-pointer group border border-gray-100"
                     >
                       <span className="text-xs font-semibold text-blue-600 uppercase tracking-wide">
@@ -260,8 +284,21 @@ The acquisition closed successfully with structured financing terms favorable to
       </section>
 
       {selectedCase && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          style={{
+            animation: 'fadeIn 0.3s ease-out'
+          }}
+        >
+          <div
+            className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            style={{
+              transformOrigin: `${clickPosition.x}px ${clickPosition.y}px`,
+              animation: isAnimating ? 'none' : 'modalExpand 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)',
+              transform: isAnimating ? 'scale(0)' : 'scale(1)',
+              opacity: isAnimating ? 0 : 1
+            }}
+          >
             <div className="sticky top-0 bg-white border-b border-gray-200 px-8 py-6 flex items-center justify-between">
               <div>
                 <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
@@ -297,6 +334,28 @@ The acquisition closed successfully with structured financing terms favorable to
           </div>
         </div>
       )}
+
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes modalExpand {
+          from {
+            transform: scale(0);
+            opacity: 0;
+          }
+          to {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   );
 }
