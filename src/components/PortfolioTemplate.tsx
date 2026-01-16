@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
 
 interface CaseStudy {
@@ -19,11 +19,17 @@ export function PortfolioTemplate() {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
   const [clickPosition, setClickPosition] = useState<ClickPosition>({ x: 0, y: 0 });
   const [isAnimating, setIsAnimating] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (selectedCase) {
       setIsAnimating(true);
-      const timer = setTimeout(() => setIsAnimating(false), 50);
+      const timer = setTimeout(() => {
+        setIsAnimating(false);
+        if (modalRef.current) {
+          modalRef.current.scrollTop = 0;
+        }
+      }, 50);
       return () => clearTimeout(timer);
     }
   }, [selectedCase]);
@@ -291,6 +297,7 @@ The acquisition closed successfully with structured financing terms favorable to
           }}
         >
           <div
+            ref={modalRef}
             className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
             style={{
               transformOrigin: `${clickPosition.x}px ${clickPosition.y}px`,
