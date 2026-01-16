@@ -14,6 +14,7 @@ export function Footer({ onNavigate }: FooterProps) {
     { name: 'Content Marketing', page: 'content' },
     { name: 'Paid Advertising', page: 'paid-ads' },
     { name: 'Careers', page: 'careers' },
+    { name: 'Portfolio Template', page: 'portfolio' },
     { name: 'Contact Us', page: 'contact' },
   ];
 

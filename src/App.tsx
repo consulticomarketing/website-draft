@@ -11,6 +11,7 @@ import { InteractiveDots } from './components/InteractiveDots';
 import { Quiz } from './components/Quiz';
 import { SEOPage } from './components/SEOPage';
 import { Careers } from './components/Careers';
+import { PortfolioTemplate } from './components/PortfolioTemplate';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -57,6 +58,8 @@ function App() {
         return <SEOPage />;
       case 'careers':
         return <Careers />;
+      case 'portfolio':
+        return <PortfolioTemplate />;
       default:
         return <Home />;
     }
