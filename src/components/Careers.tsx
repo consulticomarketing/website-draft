@@ -194,12 +194,12 @@ export function Careers() {
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
                   With a close relationship with <strong>Strathclyde University in Glasgow</strong>, our team has
                   always prioritised student employability, upskilling, and training. We have developed
-                  student-specific training programmes and built strong relationships with partners
+                  student-specific training in marketing and built strong relationships with partners
                   that share our student-centred business model.
                 </p>
                 <div className="border-l-4 border-[#007bff] pl-6 bg-blue-50 py-4">
                   <p className="text-gray-700 leading-relaxed">
-                    Our programmes are designed with academic schedules in mind, offering flexible
+                    Our marketing training is designed with academic schedules in mind, offering flexible
                     opportunities that enhance your employability while supporting your studies.
                   </p>
                 </div>
@@ -244,7 +244,7 @@ export function Careers() {
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
                   We have developed a unique <strong>100-hour training course</strong> for students, focused on
                   developing crucial skills needed to work effectively with businesses. What's at the
-                  end? Access to a Consultico-supported micro-internship programme, where we
+                  end? Access to a Consultico-supported micro-internship in marketing, where we
                   support you as you work with companies over short internship programs.
                 </p>
                 <div className="border-l-4 border-green-600 pl-6 bg-green-50 py-4">

@@ -42,7 +42,7 @@ function App() {
     switch (displayPage) {
       case 'home':
         return <Home />;
-      case 'think-first-programme':
+      case 'think-first-marketing':
         return (
           <div className="relative z-10">
             <Hero />
