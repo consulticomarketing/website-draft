@@ -184,7 +184,7 @@ The acquisition closed successfully with structured financing terms favorable to
 
             <div className="relative">
               <img
-                src="/screenshot_2026-01-16_at_13.56.31.png"
+                src="/dsc01896_(1) copy.jpeg"
                 alt="Paul Wilson presenting"
                 className="rounded-2xl shadow-2xl w-full"
               />
