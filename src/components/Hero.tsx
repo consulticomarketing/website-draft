@@ -27,7 +27,7 @@ export function Hero() {
           <div className="lg:pl-8 flex justify-center lg:justify-start">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full md:w-3/4 lg:w-full">
               <img
-                src="/untitled_(a2_(landscape))_(3).png"
+                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Marketing Workshop Overview"
                 className="w-full h-auto"
               />

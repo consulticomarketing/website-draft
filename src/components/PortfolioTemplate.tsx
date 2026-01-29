@@ -61,7 +61,7 @@ export function PortfolioTemplate() {
       title: 'Digital Transformation for Tech Startup',
       category: 'Strategy & Growth',
       summary: 'Led complete brand repositioning and go-to-market strategy for B2B SaaS company',
-      image: '/screenshot_2026-01-16_at_13.56.31.png',
+      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
       content: `This project involved a comprehensive digital transformation initiative for a rapidly growing tech startup. The challenge was to scale their marketing operations while maintaining brand consistency and message clarity across multiple channels.
 
 We implemented a data-driven approach to customer acquisition, developing detailed buyer personas and mapping the complete customer journey. This included restructuring their content strategy, optimizing their sales funnel, and implementing marketing automation systems.
@@ -80,7 +80,7 @@ The results exceeded expectations, with a 240% increase in qualified leads withi
       title: 'E-Commerce Platform Optimization',
       category: 'Conversion & Revenue',
       summary: 'Increased revenue by 180% through strategic UX improvements and conversion optimization',
-      image: '/screenshot_2026-01-16_at_13.56.31.png',
+      image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200',
       content: `This engagement focused on transforming an underperforming e-commerce platform into a revenue-generating powerhouse. The client was experiencing high traffic but low conversion rates, indicating fundamental issues with user experience and purchase flow.
 
 Our approach combined quantitative analytics with qualitative user research to identify friction points throughout the customer journey. We conducted extensive A/B testing, heat mapping analysis, and user session recordings to understand exactly where potential customers were dropping off.
@@ -99,7 +99,7 @@ The transformation resulted in a 180% revenue increase year-over-year, with conv
       title: 'Content Marketing & Brand Authority',
       category: 'Thought Leadership',
       summary: 'Built industry-leading content platform generating 500K monthly organic visitors',
-      image: '/screenshot_2026-01-16_at_13.56.31.png',
+      image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=1200',
       content: `The objective was to establish the client as a thought leader in their industry through strategic content marketing and brand positioning. Starting from minimal online presence, we developed a comprehensive content strategy that would drive organic traffic and establish credibility.
 
 We created a content framework based on search intent analysis, competitive gaps, and audience research. This included developing a robust editorial calendar, establishing content production workflows, and implementing SEO best practices throughout.
@@ -118,7 +118,7 @@ Within 18 months, the platform grew to 500,000 monthly organic visitors, with mu
       title: 'Acquisition Integration & Growth',
       category: 'M&A Strategy',
       summary: 'Structured and executed post-acquisition integration for media company portfolio add-on',
-      image: '/screenshot_2026-01-16_at_13.56.31.png',
+      image: 'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1200',
       content: `This project involved the strategic acquisition and integration of a complementary business in the media and content space. The engagement spanned from deal structuring through post-acquisition integration and growth acceleration.
 
 Working closely with the founding team, we developed a seller-financed acquisition structure that aligned incentives and ensured business continuity. The integration strategy focused on preserving core strengths while implementing operational improvements and growth initiatives.
@@ -138,22 +138,22 @@ The acquisition closed successfully with structured financing terms favorable to
   const galleryItems = [
     {
       id: 1,
-      image: '/image copy copy.png',
+      image: 'https://images.pexels.com/photos/7661590/pexels-photo-7661590.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: 'Podcast recording with one of my colleagues to promote our new services and publish content online'
     },
     {
       id: 2,
-      image: '/photo_18-10-2025,_1_18_00_pm_(5)_(2).jpg',
+      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: 'This is a photo of me and my team, whom were all hired and trained directly under me in 2025'
     },
     {
       id: 3,
-      image: '/instagram_post_-_6.png',
+      image: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: 'This was part of a marketing campaign we ran to raise awareness with students and businesses of who we are'
     },
     {
       id: 4,
-      image: '/img_2542.jpeg',
+      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: 'Part of our second podcast trial, produced by a client as part of a consultation around marketing strategy, purchasing process, and process building'
     }
   ];
