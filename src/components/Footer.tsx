@@ -9,7 +9,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
   const quickLinks = [
     { name: 'Home', page: 'home' },
-    { name: 'Think-First Marketing', page: 'think-first-marketing' },
+    { name: 'Think-First Marketing', page: 'think-first' },
     { name: 'SEO Services', page: 'seo' },
     { name: 'Content Marketing', page: 'content' },
     { name: 'Paid Advertising', page: 'paid-ads' },

@@ -13,7 +13,6 @@ import { SEOPage } from './components/SEOPage';
 import { Careers } from './components/Careers';
 import { PortfolioTemplate } from './components/PortfolioTemplate';
 import { Footer } from './components/Footer';
-import { ThinkFirstPage } from './components/ThinkFirstPage';
 import { BrandingPage } from './components/BrandingPage';
 import { ContentCreationPage } from './components/ContentCreationPage';
 import { WebDevelopmentPage } from './components/WebDevelopmentPage';
@@ -47,7 +46,7 @@ function App() {
     switch (displayPage) {
       case 'home':
         return <Home />;
-      case 'think-first-marketing':
+      case 'think-first':
         return (
           <div className="relative z-10">
             <Hero />
@@ -59,8 +58,6 @@ function App() {
             <Quiz />
           </div>
         );
-      case 'think-first':
-        return <ThinkFirstPage />;
       case 'branding':
         return <BrandingPage />;
       case 'content-creation':
