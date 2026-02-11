@@ -136,7 +136,8 @@ export function ThinkFirstPage() {
               Done-With-You Digital Marketing
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Understand Your Marketing Strategy{' '}
+              Understand Your Marketing Strategy
+              <br className="hidden lg:block" />
               <span className="text-[#007bff]">Before You Invest</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
