@@ -11,7 +11,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
 
   const menuItems = [
     { name: 'Home', page: 'home' },
-    { name: 'Market Strategy', page: 'market-strategy' },
+    { name: 'Think First', page: 'think-first' },
     { name: 'Branding & Image', page: 'branding' },
     { name: 'Content Creation', page: 'content-creation' },
     { name: 'SEO', page: 'seo' },

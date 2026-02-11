@@ -13,7 +13,7 @@ import { SEOPage } from './components/SEOPage';
 import { Careers } from './components/Careers';
 import { PortfolioTemplate } from './components/PortfolioTemplate';
 import { Footer } from './components/Footer';
-import { MarketStrategyPage } from './components/MarketStrategyPage';
+import { ThinkFirstPage } from './components/ThinkFirstPage';
 import { BrandingPage } from './components/BrandingPage';
 import { ContentCreationPage } from './components/ContentCreationPage';
 import { WebDevelopmentPage } from './components/WebDevelopmentPage';
@@ -59,8 +59,8 @@ function App() {
             <Quiz />
           </div>
         );
-      case 'market-strategy':
-        return <MarketStrategyPage />;
+      case 'think-first':
+        return <ThinkFirstPage />;
       case 'branding':
         return <BrandingPage />;
       case 'content-creation':
