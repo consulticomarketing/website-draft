@@ -10,7 +10,6 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', page: 'home' },
     { name: 'Think First', page: 'think-first' },
     { name: 'Branding & Image', page: 'branding' },
     { name: 'Content Creation', page: 'content-creation' },
