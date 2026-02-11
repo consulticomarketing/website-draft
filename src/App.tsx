@@ -48,7 +48,7 @@ function App() {
         return <Home />;
       case 'think-first':
         return (
-          <div className="relative z-10">
+          <div className="bg-white">
             <Hero />
             <ProblemSolution />
             <ServiceProcess />
