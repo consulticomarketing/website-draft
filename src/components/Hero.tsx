@@ -24,7 +24,7 @@ export function Hero() {
             <p className="text-xl text-gray-700 mb-8">
               We help B2C businesses fully understand how to ensure digital marketing will be profitable, without having to blindly invest in long-term solutions you don't understand.
             </p>
-            <button className="bg-[#007bff] text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2">
+            <button className="bg-[#FF006E] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#CC0055] transition-colors duration-200 flex items-center gap-2">
               Get Your Strategy Consultation
               <ArrowRight className="w-5 h-5" />
             </button>
