@@ -11,11 +11,11 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
 
   const menuItems = [
     { name: 'Think First', page: 'think-first' },
-    { name: 'Branding & Image', page: 'branding' },
+    { name: 'PPC', page: 'ppc' },
+    { name: 'Campaign Management', page: 'campaign-management' },
     { name: 'Content Creation', page: 'content-creation' },
     { name: 'SEO', page: 'seo' },
     { name: 'Web Development', page: 'web-development' },
-    { name: 'Social Media', page: 'social-media' },
     { name: 'Careers', page: 'careers' },
   ];
 

@@ -13,10 +13,10 @@ import { SEOPage } from './components/SEOPage';
 import { Careers } from './components/Careers';
 import { PortfolioTemplate } from './components/PortfolioTemplate';
 import { Footer } from './components/Footer';
-import { BrandingPage } from './components/BrandingPage';
+import { PPCPage } from './components/PPCPage';
+import { CampaignManagementPage } from './components/CampaignManagementPage';
 import { ContentCreationPage } from './components/ContentCreationPage';
 import { WebDevelopmentPage } from './components/WebDevelopmentPage';
-import { SocialMediaPage } from './components/SocialMediaPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -58,16 +58,16 @@ function App() {
             <Quiz />
           </div>
         );
-      case 'branding':
-        return <BrandingPage />;
+      case 'ppc':
+        return <PPCPage />;
+      case 'campaign-management':
+        return <CampaignManagementPage />;
       case 'content-creation':
         return <ContentCreationPage />;
       case 'seo':
         return <SEOPage />;
       case 'web-development':
         return <WebDevelopmentPage />;
-      case 'social-media':
-        return <SocialMediaPage />;
       case 'careers':
         return <Careers />;
       case 'portfolio':

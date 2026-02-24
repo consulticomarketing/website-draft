@@ -1,120 +1,120 @@
-import { Share2, Users, TrendingUp, Award, BarChart3, CheckCircle, ArrowRight, Heart, MessageCircle, Hash } from 'lucide-react';
+import { Megaphone, Calendar, LineChart, Award, Target, CheckCircle, ArrowRight, Layers, Clock, Sparkles } from 'lucide-react';
 import { useState } from 'react';
 
-export function SocialMediaPage() {
+export function CampaignManagementPage() {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
 
   const benefits = [
     {
-      icon: Users,
-      title: 'Build Engaged Community',
-      description: 'Create loyal followers who actively engage with your brand and become advocates.'
+      icon: Target,
+      title: 'Multi-Channel Coordination',
+      description: 'Orchestrate seamless campaigns across all marketing channels for maximum impact and reach.'
     },
     {
-      icon: TrendingUp,
-      title: 'Increase Brand Awareness',
-      description: 'Expand your reach and get your business in front of thousands of potential customers.'
+      icon: LineChart,
+      title: 'Data-Driven Execution',
+      description: 'Every decision backed by real-time data and proven marketing frameworks that deliver results.'
     },
     {
-      icon: Heart,
-      title: 'Authentic Connections',
-      description: 'Build genuine relationships with your audience through meaningful conversations.'
+      icon: Clock,
+      title: 'Faster Time to Market',
+      description: 'Launch campaigns quickly with streamlined processes and expert project management.'
     },
     {
-      icon: BarChart3,
-      title: 'Measurable Results',
-      description: 'Track engagement, reach, and conversions with detailed analytics and reporting.'
+      icon: Award,
+      title: 'Consistent Messaging',
+      description: 'Ensure your brand message is cohesive and powerful across every customer touchpoint.'
     }
   ];
 
   const services = [
     {
-      title: 'Social Media Strategy',
-      description: 'Comprehensive strategy aligned with your business goals and target audience.',
+      title: 'Campaign Strategy & Planning',
+      description: 'Comprehensive campaign blueprints aligned with your business objectives and market dynamics.',
       features: [
-        'Platform selection and optimization',
-        'Content strategy development',
-        'Audience research and targeting',
-        'Competitive analysis',
-        'Performance benchmarking'
+        'Goal setting and KPI definition',
+        'Target audience research',
+        'Competitive landscape analysis',
+        'Multi-channel strategy development',
+        'Budget allocation and forecasting'
       ]
     },
     {
-      title: 'Content Creation & Management',
-      description: 'Professional content that resonates with your audience and drives engagement.',
+      title: 'Creative Development',
+      description: 'Compelling creative assets that capture attention and drive engagement across all channels.',
       features: [
-        'Custom graphics and visuals',
-        'Engaging caption writing',
-        'Content calendar planning',
-        'Hashtag research',
-        'Posting and scheduling'
+        'Concept development and ideation',
+        'Copywriting and messaging',
+        'Visual design and branding',
+        'Video and multimedia production',
+        'A/B testing and optimization'
       ]
     },
     {
-      title: 'Community Management',
-      description: 'Active community engagement to build relationships and brand loyalty.',
+      title: 'Campaign Execution & Management',
+      description: 'Flawless execution with ongoing optimization to ensure campaigns hit their targets.',
       features: [
-        'Comment monitoring and responses',
-        'Direct message management',
-        'Proactive engagement',
-        'Reputation management',
-        'Crisis communication'
+        'Cross-channel campaign deployment',
+        'Real-time performance monitoring',
+        'Daily optimization and adjustments',
+        'Stakeholder coordination',
+        'Timeline and deliverable management'
       ]
     },
     {
-      title: 'Social Media Advertising',
-      description: 'Targeted ad campaigns that reach the right people and drive conversions.',
+      title: 'Analytics & Reporting',
+      description: 'Transparent insights into campaign performance with actionable recommendations.',
       features: [
-        'Campaign strategy and setup',
-        'Ad creative development',
-        'Audience targeting',
-        'Budget optimization',
-        'Performance tracking'
+        'Comprehensive performance dashboards',
+        'Attribution and conversion tracking',
+        'ROI analysis and modeling',
+        'Custom reporting schedules',
+        'Strategic insights and recommendations'
       ]
     }
   ];
 
   const packages = [
     {
-      name: 'Social Starter',
+      name: 'Campaign Essentials',
       price: 'Custom',
-      description: 'Essential social media for growing businesses',
+      description: 'Single campaign management for focused initiatives',
       features: [
-        '2 platforms managed',
-        '12 posts per month',
-        'Basic graphics',
-        'Community monitoring',
-        'Monthly reporting'
+        '1 campaign per quarter',
+        '2-3 marketing channels',
+        'Basic creative assets',
+        'Performance reporting',
+        'Email support'
       ],
       highlighted: false
     },
     {
-      name: 'Social Growth',
+      name: 'Campaign Pro',
       price: 'Custom',
-      description: 'Comprehensive social strategy for scaling',
+      description: 'Ongoing campaign management for growing brands',
       features: [
-        'Everything in Starter',
-        '4 platforms managed',
-        '20 posts per month',
-        'Custom graphics and videos',
-        'Active community engagement',
-        'Story and reel content',
+        'Everything in Essentials',
+        'Multiple concurrent campaigns',
+        'All marketing channels',
+        'Full creative production',
+        'Advanced analytics',
+        'Dedicated campaign manager',
         'Priority support'
       ],
       highlighted: true
     },
     {
-      name: 'Social Enterprise',
+      name: 'Campaign Enterprise',
       price: 'Custom',
-      description: 'Full-scale social media for large organizations',
+      description: 'Full-service campaign management at scale',
       features: [
-        'Everything in Growth',
-        'Unlimited platforms',
-        'Daily content',
-        'Dedicated social media manager',
-        'Paid advertising campaigns',
-        'Influencer partnerships',
-        'Real-time monitoring',
+        'Everything in Pro',
+        'Unlimited campaigns',
+        'Custom integrations',
+        'Executive-level strategy',
+        'White-glove service',
+        'Quarterly planning sessions',
+        'Real-time optimization',
         '24/7 support'
       ],
       highlighted: false
@@ -122,35 +122,35 @@ export function SocialMediaPage() {
   ];
 
   const stats = [
-    { number: '500K+', label: 'Social Impressions' },
-    { number: '92%', label: 'Engagement Increase' },
-    { number: '250+', label: 'Campaigns Managed' },
-    { number: '3.8x', label: 'Average ROI' }
+    { number: '200+', label: 'Campaigns Launched' },
+    { number: '87%', label: 'Goal Achievement Rate' },
+    { number: '$12M+', label: 'Revenue Generated' },
+    { number: '4.2x', label: 'Average ROI' }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative bg-gradient-to-br from-pink-50 via-white to-rose-50 py-20 px-6">
+      <section className="relative bg-gradient-to-br from-emerald-50 via-white to-teal-50 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Share2 className="w-4 h-4" />
-              Social Media Marketing
+            <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <Megaphone className="w-4 h-4" />
+              Campaign Management
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Turn Social Media Into a{' '}
-              <span className="text-[#007bff]">Revenue-Generating Machine</span>
+              Launch Campaigns That{' '}
+              <span className="text-[#007bff]">Drive Real Business Growth</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              Stop posting into the void. We create strategic social media campaigns that build engaged communities, drive brand awareness, and generate real business results.
+              Stop juggling disconnected marketing efforts. We orchestrate powerful multi-channel campaigns that deliver consistent messaging, measurable results, and maximum ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-[#007bff] text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2">
-                Get Your Social Strategy
+                Plan Your Next Campaign
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-[#007bff] hover:text-[#007bff] transition-colors duration-200">
-                View Our Results
+                See Our Work
               </button>
             </div>
           </div>
@@ -172,13 +172,13 @@ export function SocialMediaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
-              You're posting regularly but getting zero results
+              Your marketing campaigns are disjointed and underperforming
             </h2>
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-xl text-gray-600 mb-12">
-                  You know social media matters. You've seen competitors build massive followings and generate leads effortlessly. But when you post, crickets. Low engagement, no growth, and definitely no sales. Something's not working.
+                  You're running social ads, sending emails, posting content, and maybe even doing some PR. But nothing connects. Each channel operates in a silo, your messaging is inconsistent, and you're not seeing the results you expected. You know there's a better way.
                 </p>
 
                 <div className="space-y-6">
@@ -187,9 +187,9 @@ export function SocialMediaPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Your posts get ignored by the algorithm</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Each channel tells a different story</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Without strategic posting times, formats, and engagement tactics, your content never reaches beyond your existing followers.
+                        Your email says one thing, your ads another, and your social content something else entirely. Confused customers don't convert.
                       </p>
                     </div>
                   </div>
@@ -199,9 +199,9 @@ export function SocialMediaPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">You're not sure what content to post</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Campaigns launch late or not at all</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Guessing what your audience wants leads to inconsistent posting and content that doesn't resonate or drive engagement.
+                        Without clear project management, campaigns miss deadlines, creative assets aren't ready, and opportunities pass you by.
                       </p>
                     </div>
                   </div>
@@ -211,9 +211,9 @@ export function SocialMediaPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Managing multiple platforms is overwhelming</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">You can't measure real impact</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Between Instagram, Facebook, LinkedIn, and TikTok, you're spread too thin and doing nothing well.
+                        With different tools and disconnected metrics, you have no idea which campaigns actually drive revenue. You're guessing, not growing.
                       </p>
                     </div>
                   </div>
@@ -223,9 +223,9 @@ export function SocialMediaPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Social media isn't translating to actual sales</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Budget is wasted on underperforming tactics</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        You have followers, but they're not becoming customers. Vanity metrics don't pay the bills.
+                        Without unified strategy and ongoing optimization, you keep pouring money into channels and tactics that don't deliver results.
                       </p>
                     </div>
                   </div>
@@ -233,18 +233,18 @@ export function SocialMediaPage() {
 
                 <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl">
                   <p className="text-xl text-gray-900 font-semibold mb-4">
-                    Here's the truth: Social media is a science, not guesswork.
+                    Here's the truth: Great campaigns require orchestration, not chaos.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    We know exactly what content performs, when to post it, and how to turn followers into paying customers. While others are posting randomly and hoping for the best, we're using proven strategies that consistently deliver results. That's the difference between having a social media presence and having a social media strategy.
+                    Successful campaigns don't happen by accident. They require strategic planning, coordinated execution across channels, consistent messaging, and relentless optimization. We bring order to the chaos, aligning every touchpoint to work together toward your business goals. That's how campaigns generate real ROI.
                   </p>
                 </div>
               </div>
 
               <div className="lg:sticky lg:top-8">
                 <img
-                  src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Social media marketing and engagement"
+                  src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Campaign planning and management strategy"
                   className="w-full rounded-2xl shadow-xl"
                 />
               </div>
@@ -257,10 +257,10 @@ export function SocialMediaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              What's Included in Your Social Media Service
+              What's Included in Campaign Management
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to build a powerful social media presence that drives real business growth
+              Everything you need to launch, manage, and optimize winning campaigns across all channels
             </p>
           </div>
 
@@ -291,10 +291,10 @@ export function SocialMediaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Choose Your Social Media Package
+              Choose Your Campaign Management Package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Strategic social media management that grows with your business
+              Professional campaign management that scales with your marketing ambitions
             </p>
           </div>
 
@@ -354,17 +354,17 @@ export function SocialMediaPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              <MessageCircle className="w-8 h-8 text-[#007bff]" />
+              <Sparkles className="w-8 h-8 text-[#007bff]" />
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Social Media?
+            Ready to Launch Your Best Campaign Yet?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's build a social media strategy that drives engagement, builds community, and generates revenue
+            Let's create a coordinated, multi-channel campaign that delivers measurable results
           </p>
           <button className="bg-white text-[#007bff] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center gap-2">
-            Start Growing Your Socials
+            Start Your Campaign
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>
@@ -374,7 +374,7 @@ export function SocialMediaPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Social Media Process
+              Our Campaign Management Process
             </h2>
           </div>
 
@@ -383,27 +383,27 @@ export function SocialMediaPage() {
               <div className="w-16 h-16 bg-[#007bff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Strategy Development</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Strategy & Planning</h3>
               <p className="text-gray-600">
-                We analyze your audience, competitors, and goals to create a data-driven social media strategy.
+                We define clear objectives, map out channels, develop messaging, and build a comprehensive campaign roadmap.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-[#007bff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Content Creation & Posting</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Creative & Execution</h3>
               <p className="text-gray-600">
-                We create engaging content and post strategically to maximize reach and engagement.
+                We produce all creative assets and deploy campaigns across channels with precision timing and coordination.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-[#007bff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Engage & Optimize</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Optimize & Scale</h3>
               <p className="text-gray-600">
-                We actively engage with your community and continuously optimize based on performance data.
+                We monitor performance in real-time, make data-driven optimizations, and scale what works to maximize ROI.
               </p>
             </div>
           </div>

@@ -1,118 +1,120 @@
-import { Palette, Eye, Award, BarChart3, CheckCircle, ArrowRight, Sparkles, Target, Layers, Zap } from 'lucide-react';
+import { MousePointerClick, Target, TrendingUp, Award, BarChart3, CheckCircle, ArrowRight, Zap, DollarSign, Users } from 'lucide-react';
 import { useState } from 'react';
 
-export function BrandingPage() {
+export function PPCPage() {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
 
   const benefits = [
     {
-      icon: Eye,
-      title: 'Stand Out from Competition',
-      description: 'Create a distinctive brand identity that makes your business instantly recognizable and memorable.'
-    },
-    {
       icon: Target,
-      title: 'Connect with Your Audience',
-      description: 'Build emotional connections that transform customers into loyal brand advocates.'
+      title: 'Instant Traffic & Leads',
+      description: 'Get qualified visitors to your site immediately, no waiting for organic rankings to build up.'
     },
     {
-      icon: Award,
-      title: 'Premium Perception',
-      description: 'Elevate your brand image to command higher prices and attract quality customers.'
+      icon: DollarSign,
+      title: 'Maximum ROI',
+      description: 'Only pay for clicks that matter. Every dollar is tracked and optimized for the best return.'
+    },
+    {
+      icon: Users,
+      title: 'Reach Your Exact Audience',
+      description: 'Target by demographics, interests, location, and behavior to reach ideal customers.'
     },
     {
       icon: BarChart3,
-      title: 'Consistent Brand Experience',
-      description: 'Deliver cohesive messaging across all touchpoints for maximum impact and recognition.'
+      title: 'Complete Transparency',
+      description: 'See exactly where your budget goes and what results you get with detailed reporting.'
     }
   ];
 
   const services = [
     {
-      title: 'Brand Identity Design',
-      description: 'Create a visual identity that captures your brand essence and resonates with your audience.',
+      title: 'Google Ads Management',
+      description: 'Capture high-intent customers actively searching for your products or services.',
       features: [
-        'Logo design and variations',
-        'Color palette development',
-        'Typography system',
-        'Brand style guide',
-        'Visual asset library'
+        'Search campaign setup and optimization',
+        'Shopping ads for ecommerce',
+        'Display and remarketing campaigns',
+        'Keyword research and bidding strategy',
+        'Ad copy testing and optimization'
       ]
     },
     {
-      title: 'Brand Strategy & Positioning',
-      description: 'Define your brand purpose, values, and unique market position.',
+      title: 'Social Media Advertising',
+      description: 'Reach your target audience on Facebook, Instagram, LinkedIn, and more.',
       features: [
-        'Brand purpose and mission',
-        'Core values definition',
-        'Brand personality framework',
-        'Competitive positioning',
-        'Brand architecture'
+        'Facebook and Instagram ads',
+        'LinkedIn B2B advertising',
+        'TikTok and Snapchat campaigns',
+        'Audience targeting and segmentation',
+        'Creative design and testing'
       ]
     },
     {
-      title: 'Brand Messaging & Voice',
-      description: 'Craft compelling messaging that speaks directly to your target audience.',
+      title: 'Conversion Rate Optimization',
+      description: 'Turn more clicks into customers with landing page optimization and testing.',
       features: [
-        'Brand voice guidelines',
-        'Key messaging framework',
-        'Tagline development',
-        'Brand story creation',
-        'Tone of voice templates'
+        'Landing page design and testing',
+        'A/B testing strategies',
+        'Conversion funnel optimization',
+        'Heat mapping and user behavior analysis',
+        'Form and checkout optimization'
       ]
     },
     {
-      title: 'Brand Collateral & Assets',
-      description: 'Design professional materials that bring your brand to life across all channels.',
+      title: 'Analytics & Reporting',
+      description: 'Track every metric that matters and get actionable insights for growth.',
       features: [
-        'Business card design',
-        'Letterhead and templates',
-        'Social media templates',
-        'Presentation decks',
-        'Marketing collateral'
+        'Custom dashboard setup',
+        'ROI and ROAS tracking',
+        'Attribution modeling',
+        'Weekly performance reports',
+        'Strategic recommendations'
       ]
     }
   ];
 
   const packages = [
     {
-      name: 'Brand Essentials',
+      name: 'PPC Starter',
       price: 'Custom',
-      description: 'Perfect for startups and small businesses',
+      description: 'Perfect for businesses new to paid advertising',
       features: [
-        'Logo design',
-        'Color palette',
-        'Basic brand guidelines',
-        '2 rounds of revisions',
+        '1 platform (Google or Social)',
+        'Up to $2K monthly ad spend',
+        '2 campaigns',
+        'Basic reporting',
         'Email support'
       ],
       highlighted: false
     },
     {
-      name: 'Brand Complete',
+      name: 'PPC Growth',
       price: 'Custom',
-      description: 'Comprehensive branding for growing businesses',
+      description: 'Comprehensive PPC for scaling businesses',
       features: [
-        'Everything in Essentials',
-        'Full brand strategy',
-        'Brand messaging framework',
-        'Complete style guide',
-        'Marketing collateral design',
+        'Everything in Starter',
+        '2-3 platforms',
+        'Up to $10K monthly ad spend',
+        'Multiple campaigns',
+        'Conversion tracking setup',
+        'A/B testing',
         'Priority support'
       ],
       highlighted: true
     },
     {
-      name: 'Brand Enterprise',
+      name: 'PPC Enterprise',
       price: 'Custom',
-      description: 'Full-scale branding for established companies',
+      description: 'Full-scale PPC management for large budgets',
       features: [
-        'Everything in Complete',
-        'Multi-brand architecture',
-        'Dedicated brand consultant',
-        'Brand rollout strategy',
-        'Staff training materials',
-        'Ongoing brand management',
+        'Everything in Growth',
+        'All platforms',
+        'Unlimited ad spend',
+        'Advanced testing strategies',
+        'Dedicated account manager',
+        'Real-time optimization',
+        'Custom analytics',
         '24/7 support'
       ],
       highlighted: false
@@ -120,35 +122,35 @@ export function BrandingPage() {
   ];
 
   const stats = [
-    { number: '300+', label: 'Brands Created' },
-    { number: '95%', label: 'Client Satisfaction' },
-    { number: '2 Weeks', label: 'Average Delivery' },
-    { number: '89%', label: 'Revenue Increase' }
+    { number: '$5M+', label: 'Ad Spend Managed' },
+    { number: '425%', label: 'Average ROAS' },
+    { number: '180+', label: 'Active Campaigns' },
+    { number: '47%', label: 'Lower CPA' }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative bg-gradient-to-br from-rose-50 via-white to-orange-50 py-20 px-6">
+      <section className="relative bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-rose-100 text-rose-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <Palette className="w-4 h-4" />
-              Branding & Image
+            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <MousePointerClick className="w-4 h-4" />
+              Pay-Per-Click Advertising
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Build a Brand That{' '}
-              <span className="text-[#007bff]">People Remember & Trust</span>
+              Turn Ad Spend Into{' '}
+              <span className="text-[#007bff]">Predictable Revenue</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-              Your brand is more than a logo. It's the feeling people get when they think of your business. We create powerful brand identities that attract the right customers and drive lasting growth.
+              Stop wasting money on ads that don't convert. We create data-driven PPC campaigns that deliver qualified leads and measurable ROI from day one.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-[#007bff] text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2">
-                Start Your Brand Journey
+                Get Your Free PPC Audit
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-[#007bff] hover:text-[#007bff] transition-colors duration-200">
-                View Our Portfolio
+                View Case Studies
               </button>
             </div>
           </div>
@@ -170,13 +172,13 @@ export function BrandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-12">
-              Your business deserves better than a forgettable brand
+              Your paid ads are burning cash without delivering results
             </h2>
 
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-xl text-gray-600 mb-12">
-                  You've poured your heart into building something great. But when customers can't tell you apart from competitors, all that hard work goes unnoticed. Your brand should be doing the heavy lifting.
+                  You're spending thousands on Google Ads and social media advertising. The clicks are coming in, but something's wrong. Your cost per acquisition keeps climbing, conversions are down, and you can't figure out what's broken.
                 </p>
 
                 <div className="space-y-6">
@@ -185,9 +187,9 @@ export function BrandingPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">You look like everyone else in your industry</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">You're targeting the wrong people</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Generic branding makes it impossible to stand out. Customers don't remember you because there's nothing memorable about your brand.
+                        Broad targeting means you're paying for clicks from people who will never buy. Every wasted click drains your budget.
                       </p>
                     </div>
                   </div>
@@ -197,9 +199,9 @@ export function BrandingPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Your brand doesn't reflect the quality you deliver</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Your ads aren't converting</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Amateur branding makes your business look cheap, even when you deliver premium results. First impressions matter.
+                        Generic ad copy and poor landing pages mean most visitors bounce immediately. You're paying for traffic that goes nowhere.
                       </p>
                     </div>
                   </div>
@@ -209,9 +211,9 @@ export function BrandingPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Inconsistent messaging confuses potential customers</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">You can't track real ROI</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Without clear brand guidelines, every touchpoint tells a different story. Confusion kills conversions.
+                        Without proper tracking and attribution, you have no idea which campaigns actually drive revenue. You're flying blind.
                       </p>
                     </div>
                   </div>
@@ -221,9 +223,9 @@ export function BrandingPage() {
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">You're competing on price because you lack brand value</h3>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Costs keep rising while results decline</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        Without strong branding, customers see you as a commodity. Strong brands command premium pricing.
+                        Platform algorithms change constantly. Without daily optimization, your campaigns become less effective and more expensive over time.
                       </p>
                     </div>
                   </div>
@@ -231,18 +233,18 @@ export function BrandingPage() {
 
                 <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl">
                   <p className="text-xl text-gray-900 font-semibold mb-4">
-                    Here's the truth: Your brand is your biggest business asset.
+                    Here's the truth: PPC is a profit machine when done right.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    Strong brands attract better customers, command higher prices, and create lasting loyalty. We don't just make things look pretty—we build strategic brand identities that drive real business results. Your brand should work as hard as you do.
+                    The difference between profitable PPC and burning money is precision. We use advanced targeting, relentless testing, and proven conversion strategies to ensure every dollar you spend generates more in return. While others set it and forget it, we optimize daily to maximize your ROI.
                   </p>
                 </div>
               </div>
 
               <div className="lg:sticky lg:top-8">
                 <img
-                  src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Brand design and strategy"
+                  src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="PPC advertising dashboard and analytics"
                   className="w-full rounded-2xl shadow-xl"
                 />
               </div>
@@ -255,10 +257,10 @@ export function BrandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              What's Included in Your Branding Package
+              What's Included in Your PPC Management
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to build a brand that attracts, converts, and retains customers
+              Everything you need to turn paid advertising into your most profitable customer acquisition channel
             </p>
           </div>
 
@@ -289,10 +291,10 @@ export function BrandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Choose Your Branding Package
+              Choose Your PPC Package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional branding solutions tailored to your business needs
+              Strategic PPC management that scales with your business growth
             </p>
           </div>
 
@@ -352,17 +354,17 @@ export function BrandingPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              <Sparkles className="w-8 h-8 text-[#007bff]" />
+              <Zap className="w-8 h-8 text-[#007bff]" />
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Build Your Brand?
+            Ready to Scale with Profitable PPC?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's create a brand identity that sets you apart and drives business growth
+            Let's build campaigns that deliver qualified leads and predictable revenue at scale
           </p>
           <button className="bg-white text-[#007bff] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 inline-flex items-center gap-2">
-            Start Your Brand Project
+            Start Your PPC Campaign
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>
@@ -372,7 +374,7 @@ export function BrandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Branding Process
+              Our PPC Process
             </h2>
           </div>
 
@@ -381,27 +383,27 @@ export function BrandingPage() {
               <div className="w-16 h-16 bg-[#007bff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery & Strategy</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Audit & Strategy</h3>
               <p className="text-gray-600">
-                We dive deep into your business, audience, and goals to create a strategic foundation for your brand.
+                We analyze your current campaigns, competitors, and audience to build a data-driven strategy for maximum ROI.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-[#007bff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Design & Development</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Launch & Optimize</h3>
               <p className="text-gray-600">
-                We create your visual identity, messaging framework, and all brand assets with strategic precision.
+                We set up campaigns with precise targeting and compelling creative, then optimize daily for peak performance.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-[#007bff] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Launch & Support</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Scale & Report</h3>
               <p className="text-gray-600">
-                We deliver your complete brand package with guidelines and ongoing support for consistent implementation.
+                We scale what works, cut what doesn't, and provide transparent reporting on every dollar spent and earned.
               </p>
             </div>
           </div>
